@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Makazi Yangu | Property Listings</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #0b3d0b;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav {
+      background-color: #0b3d0b;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      padding: 10px 30px;
+      margin: 0 10px;
+      background: #e0e0e0;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .tab.active {
+      background: #0b3d0b;
+      color: white;
+    }
+
+    .filter-bar {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      margin-bottom: 30px;
+    }
+
+    .filter-bar input, .filter-bar select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .filter-bar button {
+      background-color: #0b3d0b;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filter-bar button:hover {
+      background-color: #097509;
+    }
+
+    .listing-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .listing-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .listing-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .listing-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .listing-info {
+      padding: 15px;
+    }
+
+    .listing-info h3 {
+      color: #0b3d0b;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: #0b3d0b;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+    }
+
+    .view-btn {
+      background-color: #0b3d0b;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+
+    .map-section, .tour-section {
+      margin-top: 50px;
+      padding: 30px 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .map-section h2, .tour-section h2 {
+      color: #0b3d0b;
+      margin-bottom: 15px;
+    }
+
+    .map-placeholder, .tour-placeholder {
+      width: 100%;
+      height: 400px;
+      background: #d7f2d7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0b3d0b;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #0b3d0b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Makazi Yangu</h1>
+    <p>Explore Properties for Sale & Rent</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Listings</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="tabs">
+      <div class="tab active" onclick="toggleTab('sale')">For Sale</div>
+      <div class="tab" onclick="toggleTab('rent')">For Rent</div>
+    </div>
+
+    <div class="filter-bar">
+      <input type="text" placeholder="Location">
+      <select>
+        <option value="">Property Type</option>
+        <option>Apartment</option>
+        <option>House</option>
+        <option>Land</option>
+      </select>
+      <input type="number" placeholder="Min Price">
+      <input type="number" placeholder="Max Price">
+      <select>
+        <option value="">Bedrooms</option>
+        <option>1+</option>
+        <option>2+</option>
+        <option>3+</option>
+      </select>
+      <button>Search</button>
+    </div>
+
+    <div class="listing-grid" id="listings">
+      <div class="listing-card">
+        <img src="C:\Users\HP\Downloads\int6.jpeg" alt="Property">
+        <div class="tag">For Sale</div>
+        <div class="listing-info">
+          <h3>KES 9,500,000</h3>
+          <div class="details">3 Bed | 2 Bath | 200 sqm</div>
+          <div class="details">Westlands, Nairobi</div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="listing-card">
+        <img src="C:\Users\HP\Downloads\int3.jpeg" alt="Property">
+        <div class="tag">For Rent</div>
+        <div class="listing-info">
+          <h3>KES 45,000/mo</h3>
+          <div class="details">2 Bed | 1 Bath | 120 sqm</div>
+          <div class="details">Kilimani, Nairobi</div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-section">
+      <h2>360° Virtual Tour</h2>
+      <div class="tour-placeholder">
+        [360° Virtual Tour Viewer Will Load Here]
+      </div>
+    </div>
+
+    <div class="map-section">
+      <h2>Nearby Amenities & Distances</h2>
+      <div class="map-placeholder">
+        [Interactive Geolocation Map Will Load Here]
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Makazi Yangu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTab(tab) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(t => t.classList.remove('active'));
+
+      if (tab === 'sale') {
+        tabs[0].classList.add('active');
+        // filter logic here
+      } else {
+        tabs[1].classList.add('active');
+        // filter logic here
+      }
+    }
+  </script>
+
+</body>
+</html>
