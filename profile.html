@@ -63,7 +63,7 @@
       flex-grow: 1;
       padding: 30px;
       overflow-y: auto;
-      background-color: #fffaf0#;
+      background-color: #fffaf0;
     }
 
     .content-section {
@@ -73,262 +73,226 @@
     .content-section.show {
       display: block;
     }
-	.property-form {
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-}
 
-.property-form label {
-  margin-top: 15px;
-  font-weight: 600;
-}
+    .property-form {
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+    }
 
-.property-form input,
-.property-form textarea,
-.property-form select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-top: 5px;
-  font-size: 15px;
-}
+    .property-form label {
+      margin-top: 15px;
+      font-weight: 600;
+    }
 
-.property-form button {
-  margin-top: 20px;
-  background-color: #004225;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s;
-}
+    .property-form input,
+    .property-form textarea,
+    .property-form select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+      font-size: 15px;
+    }
 
-.property-form button:hover {
-  background-color: #00663b;
-}
-/*listings*/
-.property-listings {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
+    .property-form button {
+      margin-top: 20px;
+      background-color: #004225;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
 
-.property-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
+    .property-form button:hover {
+      background-color: #00663b;
+    }
 
-.property-card:hover {
-  transform: translateY(-5px);
-}
+    .property-listings {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-.property-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
+    .property-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
 
-.property-details {
-  padding: 15px;
-}
+    .property-card:hover {
+      transform: translateY(-5px);
+    }
 
-.property-details h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
-  color: #004225;
-}
+    .property-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-.property-details .price {
-  font-weight: bold;
-  color: #00663b;
-  margin-bottom: 6px;
-}
+    .property-details {
+      padding: 15px;
+    }
 
-.property-details .location {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 12px;
-}
+    .property-details h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #004225;
+    }
 
-.property-actions {
-  display: flex;
-  gap: 10px;
-}
+    .property-details .price {
+      font-weight: bold;
+      color: #00663b;
+      margin-bottom: 6px;
+    }
 
-.property-actions button {
-  flex: 1;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-  background-color: #004225;
-  color: #fff;
-  transition: background 0.3s ease;
-}
+    .property-details .location {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 12px;
+    }
 
-.property-actions button.delete {
-  background-color: #a94442;
-}
+    .property-actions {
+      display: flex;
+      gap: 10px;
+    }
 
-.property-actions button:hover {
-  opacity: 0.9;
-}
-.status-badge {
-  position: absolute;
-  background: #ffb300;
-  color: #000;
-  padding: 5px 10px;
-  font-size: 13px;
-  font-weight: bold;
-  top: 10px;
-  left: 10px;
-  border-radius: 5px;
-  z-index: 1;
-}
+    .property-actions button {
+      flex: 1;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      background-color: #004225;
+      color: #fff;
+      transition: background 0.3s ease;
+    }
 
-.property-card {
-  position: relative;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
+    .property-actions button.delete {
+      background-color: #a94442;
+    }
 
-.property-details .views {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 12px;
-}
-/*overview*/
-#overview {
-  padding: 20px;
-}
+    .property-actions button:hover {
+      opacity: 0.9;
+    }
 
-#overview h2 {
-  color: #004225;
-}
+    .status-badge {
+      position: absolute;
+      background: #ffb300;
+      color: #000;
+      padding: 5px 10px;
+      font-size: 13px;
+      font-weight: bold;
+      top: 10px;
+      left: 10px;
+      border-radius: 5px;
+      z-index: 1;
+    }
 
-.timestamp {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 20px;
-}
+    .overview-card {
+      background: #fff;
+      border-left: 6px solid #004225;
+      border-radius: 8px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: transform 0.2s;
+    }
 
-.overview-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
+    .overview-card:hover {
+      transform: translateY(-4px);
+    }
 
-.overview-card {
-  background: #fff;
-  border-left: 6px solid #004225;
-  border-radius: 8px;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  transition: transform 0.2s;
-}
+    .overview-card i {
+      font-size: 28px;
+      color: #004225;
+    }
 
-.overview-card:hover {
-  transform: translateY(-4px);
-}
+    .overview-card h3 {
+      margin: 0;
+      font-size: 22px;
+      color: #004225;
+    }
 
-.overview-card i {
-  font-size: 28px;
-  color: #004225;
-}
+    .overview-card p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
 
-.overview-card h3 {
-  margin: 0;
-  font-size: 22px;
-  color: #004225;
-}
+    #overview canvas {
+      margin-top: 40px;
+      max-width: 700px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+    }
 
-.overview-card p {
-  margin: 0;
-  font-size: 14px;
-  color: #555;
-}
+    .profile-settings {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 1px 10px rgba(0,0,0,0.08);
+    }
 
-#overview canvas {
-  margin-top: 40px;
-  max-width: 700px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-}
-/*profile settings*/
-.profile-settings {
-  max-width: 600px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 1px 10px rgba(0,0,0,0.08);
-}
+    .profile-settings h2 {
+      text-align: center;
+      color: #004225;
+      margin-bottom: 20px;
+    }
 
-.profile-settings h2 {
-  text-align: center;
-  color: #004225;
-  margin-bottom: 20px;
-}
+    .profile-settings label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #004225;
+    }
 
-.profile-settings label {
-  display: block;
-  margin-top: 15px;
-  font-weight: 600;
-  color: #004225;
-}
+    .profile-settings input,
+    .profile-settings select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
 
-.profile-settings input,
-.profile-settings select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
-}
+    .profile-settings button {
+      display: block;
+      width: 100%;
+      margin-top: 25px;
+      background-color: #004225;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-.profile-settings button {
-  display: block;
-  width: 100%;
-  margin-top: 25px;
-  background-color: #004225;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
+    .profile-settings button:hover {
+      background-color: #006b3c;
+    }
 
-.profile-settings button:hover {
-  background-color: #006b3c;
-}
-
-.success-msg {
-  display: none;
-  margin-top: 15px;
-  text-align: center;
-  color: green;
-  font-weight: 500;
-}
-/*messages*/
-
+    .success-msg {
+      display: none;
+      margin-top: 15px;
+      text-align: center;
+      color: green;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -350,240 +314,75 @@
 
   <!-- Main Content -->
   <main class="main-content">
-   <section id="overview">
-  <h2>Dashboard Overview</h2>
-  <p class="timestamp">Last updated: <span id="lastUpdated"></span></p>
+    <section id="overview">
+      <h2>Dashboard Overview</h2>
+      <p class="timestamp">Last updated: <span id="lastUpdated"></span></p>
 
-  <div class="overview-cards">
-    <div class="overview-card">
-      <i class="fas fa-home"></i>
-      <div>
-        <h3 class="counter" data-target="3">0</h3>
-        <p>Total Listings</p>
+      <div class="overview-cards">
+        <div class="overview-card">
+          <i class="fas fa-home"></i>
+          <div>
+            <h3 class="counter" data-target="3">0</h3>
+            <p>Total Listings</p>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <i class="fas fa-eye"></i>
+          <div>
+            <h3 class="counter" data-target="126">0</h3>
+            <p>Total Views</p>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <i class="fas fa-envelope-open-text"></i>
+          <div>
+            <h3 class="counter" data-target="4">0</h3>
+            <p>New Inquiries</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="overview-card">
-      <i class="fas fa-eye"></i>
-      <div>
-        <h3 class="counter" data-target="126">0</h3>
-        <p>Total Views</p>
-      </div>
-    </div>
+      <canvas id="overviewChart"></canvas>
+    </section>
 
-    <div class="overview-card">
-      <i class="fas fa-envelope-open-text"></i>
-      <div>
-        <h3 class="counter" data-target="4">0</h3>
-        <p>New Inquiries</p>
-      </div>
-    </div>
-  </div>
+    <!-- Add Property Section -->
+    <section id="addProperty" class="content-section">
+      <h2>Add New Property</h2>
+      <form id="propertyForm" class="property-form">
+        <label>Property Title</label>
+        <input type="text" placeholder="e.g. 2 Bedroom Apartment in Kilimani" required>
 
-  <canvas id="overviewChart"></canvas>
-</section>
+        <label>Price (KES)</label>
+        <input type="number" placeholder="e.g. 35000" required>
 
-   <section id="addProperty" class="content-section">
-  <h2>Add New Property</h2>
-  <form id="propertyForm" class="property-form">
-    <label>Property Title</label>
-    <input type="text" placeholder="e.g. 2 Bedroom Apartment in Kilimani" required>
+        <label>Location</label>
+        <input type="text" placeholder="e.g. Kilimani, Nairobi" required>
 
-    <label>Price (KES)</label>
-    <input type="number" placeholder="e.g. 35000" required>
+        <label>Category</label>
+        <select required>
+          <option value="">-- Select --</option>
+          <option value="rent">For Rent</option>
+          <option value="sale">For Sale</option>
+        </select>
 
-    <label>Location</label>
-    <input type="text" placeholder="e.g. Kilimani, Nairobi" required>
+        <label>Description</label>
+        <textarea placeholder="Brief description of the property..." rows="4" required></textarea>
 
-    <label>Category</label>
-    <select required>
-      <option value="">-- Select --</option>
-      <option value="rent">For Rent</option>
-      <option value="sale">For Sale</option>
-    </select>
+        <label>Upload Images</label>
+        <input type="file" multiple>
 
-    <label>Description</label>
-    <textarea placeholder="Brief description of the property..." rows="4" required></textarea>
+        <button type="submit">Submit Property</button>
+      </form>
+    </section>
 
-    <label>Upload Images</label>
-    <input type="file" multiple>
-
-    <button type="submit">Submit Property</button>
-  </form>
-</section>
-
+    <!-- My Listings Section -->
     <section id="myProperties" class="content-section">
-  <h2>My Listings</h2>
-  <div class="property-listings">
-    <div class="property-card">
-  <div class="status-badge">For Rent</div>
-  <img src="C:\Users\HP\Downloads\int2.jpeg" alt="Property Image">
-  <div class="property-details">
-    <h3>2 Bedroom Apartment in Kilimani</h3>
-    <p class="price">KSh 35,000/month</p>
-    <p class="location"><i class="fas fa-map-marker-alt"></i> Kilimani, Nairobi</p>
-    <p class="views"><i class="fas fa-eye"></i> 124 views</p>
+      <h2>My Listings</h2>
+      <div class="property-listings">
+        <div class="property-card">
+          <div class="status-badge">For Rent</div>
+          
 
-    <div class="property-actions">
-      <button onclick="alert('Viewing full listing...')">View Listing</button>
-      <button>Edit</button>
-      <button class="delete">Delete</button>
-    </div>
-  </div>
-</div>
-  </div>
-</section>
-
-    <section id="messages" class="content-section">
-      <h2>Messages</h2>
-      <section class="messages-section">
-  <h2>Inbox Messages</h2>
-  <div class="message-list">
-
-    <div class="message-card unread">
-      <div class="message-header">
-        <h4>Jane Mwangi</h4>
-        <span class="msg-date">Apr 17, 2025</span>
-      </div>
-      <p>Hi, is the 2-bedroom in Kileleshwa still available?</p>
-      <div class="message-actions">
-        <button class="reply-btn">Reply</button>
-        <button class="mark-read-btn">Mark as Read</button>
-      </div>
-    </div>
-
-    <div class="message-card unread">
-      <div class="message-header">
-        <h4>David Otieno</h4>
-        <span class="msg-date">Apr 16, 2025</span>
-      </div>
-      <p>I’m interested in your Lavington apartment. Please call me.</p>
-      <div class="message-actions">
-        <button class="reply-btn">Reply</button>
-        <button class="mark-read-btn">Mark as Read</button>
-      </div>
-    </div>
-
-    <div class="message-card">
-      <div class="message-header">
-        <h4>Maria Njeri</h4>
-        <span class="msg-date">Apr 15, 2025</span>
-      </div>
-      <p>Can I schedule a viewing for next week?</p>
-      <div class="message-actions">
-        <button class="reply-btn">Reply</button>
-        <button class="mark-read-btn" disabled>Read</button>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-    <section id="settings" class="content-section">
-      <h2>Profile Settings</h2>
-   <section class="profile-settings">
-  <h2>Profile Settings</h2>
-  <form id="settingsForm">
-    <label for="fullname">Full Name</label>
-    <input type="text" id="fullname" placeholder="John Doe" required />
-
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="example@email.com" required />
-
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" placeholder="+254 712 345678" required />
-
-    <label for="accountType">Account Type</label>
-    <select id="accountType">
-      <option value="agent">Agent</option>
-      <option value="owner">Property Owner</option>
-      <option value="buyer">Buyer</option>
-    </select>
-
-    <label for="location">Location</label>
-    <input type="text" id="location" placeholder="Nairobi, Kenya" />
-
-    <button type="submit">Save Changes</button>
-    <p class="success-msg" id="successMsg">Profile updated successfully!</p>
-  </form>
-</section>
-  </main>
-</div>
-
-<script>
-  function showSection(event, id) {
-    // Hide all sections
-    document.querySelectorAll('.content-section').forEach(section => {
-      section.classList.remove('show');
-    });
-
-    // Remove active class from all menu items
-    document.querySelectorAll('.sidebar nav ul li').forEach(item => {
-      item.classList.remove('active');
-    });
-
-    // Show selected section
-    document.getElementById(id).classList.add('show');
-
-    // Highlight the clicked menu item
-    event.currentTarget.classList.add('active');
-  }
-</script>
-<script>
-// Animate Counters
-document.querySelectorAll('.counter').forEach(counter => {
-  const update = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const speed = 200;
-    const increment = Math.ceil(target / speed);
-    if (count < target) {
-      counter.innerText = count + increment;
-      setTimeout(update, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
-  update();
-});
-
-// Last Updated
-document.getElementById("lastUpdated").innerText = new Date().toLocaleString();
-
-// Chart Setup
-const ctx = document.getElementById('overviewChart').getContext('2d');
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-    datasets: [{
-      label: 'Property Views',
-      data: [12, 19, 10, 5, 17],
-      backgroundColor: '#004225'
-    }]
-  },
-  options: {
-    responsive: true,
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("settingsForm");
-  const successMsg = document.getElementById("successMsg");
-
-  form?.addEventListener("submit", function (e) {
-    e.preventDefault();
-    successMsg.style.display = "block";
-    setTimeout(() => {
-      successMsg.style.display = "none";
-    }, 3000);
-  });
-});
-</body>
-</html>
+          

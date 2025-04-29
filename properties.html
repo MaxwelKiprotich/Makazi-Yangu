@@ -226,12 +226,12 @@
         <option>2+</option>
         <option>3+</option>
       </select>
-      <button>Search</button>
+      <button onclick="filterListings()">Search</button>
     </div>
 
     <div class="listing-grid" id="listings">
-      <div class="listing-card">
-        <img src="C:\Users\HP\Downloads\int6.jpeg" alt="Property">
+      <div class="listing-card sale">
+        <img src="images/int6.jpeg" alt="Property">
         <div class="tag">For Sale</div>
         <div class="listing-info">
           <h3>KES 9,500,000</h3>
@@ -241,8 +241,8 @@
         </div>
       </div>
 
-      <div class="listing-card">
-        <img src="C:\Users\HP\Downloads\int3.jpeg" alt="Property">
+      <div class="listing-card rent">
+        <img src="images/int3.jpeg" alt="Property">
         <div class="tag">For Rent</div>
         <div class="listing-info">
           <h3>KES 45,000/mo</h3>
@@ -277,14 +277,37 @@
     function toggleTab(tab) {
       const tabs = document.querySelectorAll('.tab');
       tabs.forEach(t => t.classList.remove('active'));
-
+      const listings = document.querySelectorAll('.listing-card');
+      
       if (tab === 'sale') {
         tabs[0].classList.add('active');
-        // filter logic here
+        listings.forEach(listing => listing.style.display = listing.classList.contains('sale') ? 'block' : 'none');
       } else {
         tabs[1].classList.add('active');
-        // filter logic here
+        listings.forEach(listing => listing.style.display = listing.classList.contains('rent') ? 'block' : 'none');
       }
+    }
+
+    function filterListings() {
+      const location = document.querySelector('input[type="text"]').value.toLowerCase();
+      const propertyType = document.querySelector('select').value.toLowerCase();
+      const minPrice = document.querySelector('input[type="number"]').value;
+      const maxPrice = document.querySelectorAll('input[type="number"]')[1].value;
+      const bedroomCount = document.querySelectorAll('select')[1].value;
+
+      const listings = document.querySelectorAll('.listing-card');
+      listings.forEach(listing => {
+        const price = parseInt(listing.querySelector('h3').innerText.replace(/\D/g, ''));
+        const locationText = listing.querySelector('.details').innerText.toLowerCase();
+        let showListing = true;
+
+        if (location && !locationText.includes(location)) showListing = false;
+        if (propertyType && !listing.querySelector('.tag').innerText.toLowerCase().includes(propertyType)) showListing = false;
+        if (minPrice && price < minPrice) showListing = false;
+        if (maxPrice && price > maxPrice) showListing = false;
+
+        listing.style.display = showListing ? 'block' : 'none';
+      });
     }
   </script>
 

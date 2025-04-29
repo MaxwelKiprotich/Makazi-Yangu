@@ -2,203 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Makazi Yangu | Blog</title>
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #0b3d0b;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin-bottom: 5px;
-    }
-
-    nav {
-      background-color: #0b3d0b;
-      padding: 10px 0;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #a8e6a1;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .blog-posts {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .post {
-      background-color: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .post:hover {
-      transform: translateY(-5px);
-    }
-
-    .post img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .post-content {
-      padding: 20px;
-    }
-
-    .post-content h2 {
-      margin-bottom: 10px;
-      font-size: 1.5rem;
-      color: #0b3d0b;
-    }
-
-    .post-content p {
-      font-size: 0.95rem;
-      margin-bottom: 15px;
-    }
-
-    .read-more {
-      color: #0b3d0b;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .read-more:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background-color: #0b3d0b;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    /* Scroll to top button */
-    #topBtn {
-      display: none;
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 99;
-      background-color: #0b3d0b;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    #topBtn:hover {
-      background-color: #097509;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makazi Yangu - Blog</title>
+  <link rel="stylesheet" href="Makaziyangu.css" />
+  <link rel="icon" href="images/mklogowhitedb.png" type="image/png" />
 </head>
 <body>
-
+  
   <header>
-    <h1>Makazi Yangu</h1>
-    <p>Your Trusted Real Estate Partner</p>
+    <nav class="nav-container">
+      <div class="logo">Makazi Yangu</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Listings</a>
-    <a href="#">Blog</a>
-    <a href="#">Contact</a>
-  </nav>
+  <main>
+    <section class="blog-posts">
+      <h1>Latest from Our Blog</h1>
 
-  <div class="container">
-    <h2 style="margin-bottom: 20px; color: #0b3d0b;">Latest Blog Posts</h2>
-    <div class="blog-posts">
-      <div class="post">
-        <img src="C:\Users\HP\Downloads\int4.jpeg" alt="Blog Image">
-        <div class="post-content">
-          <h2>Top 5 Tips for First-Time Home Buyers</h2>
-          <p>Buying your first home can be exciting and overwhelming. Here are 5 key tips to help you make a smart move.</p>
-          <a href="#" class="read-more">Read More</a>
-        </div>
-      </div>
+      <article class="post">
+        <img src="images/int4.jpeg" alt="Luxury Apartment Interior" />
+        <h2>Step-by-Step Guide to Buying Property in Kenya</h2>
+        <p>Buying property in Kenya can be simple if you follow this step-by-step guide covering financing, title deeds, and legal requirements.</p>
+        <a href="#">Read More</a>
+      </article>
 
-      <div class="post">
-        <img src="C:\Users\HP\Downloads\int5.jpeg" alt="Blog Image">
-        <div class="post-content">
-          <h2>Why Investing in Real Estate Still Makes Sense</h2>
-          <p>Real estate has proven to be a stable and profitable investment. Here's why it should be part of your strategy.</p>
-          <a href="#" class="read-more">Read More</a>
-        </div>
-      </div>
-
-      <div class="post">
-        <img src="C:\Users\HP\Downloads\int7.jpeg" alt="Blog Image">
-        <div class="post-content">
-          <h2>How to Stage Your Home for a Quick Sale</h2>
-          <p>Staging your home can make a huge difference in attracting buyers. Learn how to do it right on a budget.</p>
-          <a href="#" class="read-more">Read More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <button onclick="scrollToTop()" id="topBtn" title="Go to top">Top</button>
+      <article class="post">
+        <img src="images/int5.jpeg" alt="Modern Living Room" />
+        <h2>Top Interior Design Trends in Nairobi</h2>
+        <p>Explore the latest interior design trends that are taking over Nairobi homes in 2025 – from open spaces to bold colors and modern finishes.</p>
+        <a href="#">Read More</a>
+      </article>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Makazi Yangu. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Scroll to top button behavior
-    const topBtn = document.getElementById("topBtn");
-
-    window.onscroll = function () {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        topBtn.style.display = "block";
-      } else {
-        topBtn.style.display = "none";
-      }
-    };
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  </script>
 
 </body>
 </html>
